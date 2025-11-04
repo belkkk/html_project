@@ -1,0 +1,139 @@
+/* ______________
+   GLOBAL RESET
+_______________ */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: #ff7043;
+}
+
+/* ______________
+   CATALOG WRAPPER
+_______________ */
+
+.catalog {
+    margin-left: 240px;
+    /* ширина sidebar */
+    padding: 40px;
+    width: calc(100% - 240px);
+}
+
+.catalog h2 {
+    font-size: 24px;
+    color: #ff7043;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* ______________
+   BOOK GRID
+_______________ */
+
+.book-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+}
+
+/* ______________
+   BOOK CARD
+_______________ */
+
+.book-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(520px, 1fr));
+    gap: 32px;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* 📘 Карточка книги */
+.book-card {
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    background-color: #1e1e1e;
+    border-radius: 14px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    color: #e0e0e0;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+}
+
+.book-card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 6px;
+    height: 100%;
+    background: linear-gradient(to bottom, #7e57c2, #ff7043);
+}
+
+.book-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.6);
+}
+
+/* 📕 Обложка */
+.book-cover {
+    width: 140px;
+    height: 200px;
+    object-fit: cover;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    flex-shrink: 0;
+}
+
+/* 📖 Информация */
+.book-info {
+    padding: 20px 20px 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.book-title {
+    font-size: 22px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.book-meta {
+    font-size: 14px;
+    color: #b0b0b0;
+    margin-bottom: 6px;
+}
+
+.book-description {
+    font-size: 15px;
+    color: #cccccc;
+    margin-top: 12px;
+    line-height: 1.6;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}

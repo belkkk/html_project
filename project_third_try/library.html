@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Моя библиотека</title>
+
+    <!-- Шрифты и стили -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/sidebar.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/library.css" />
+</head>
+
+<body>
+    <a id="top"></a>
+
+    <!-- 📚 Боковая панель -->
+    <div id="sidebar-container"></div>
+
+    <!-- 📘 Основной контент -->
+    <main class="library">
+        <h2 class="library-title">Моя библиотека</h2>
+        <div class="library-grid" id="libraryGrid">
+            <!-- Карточки книг будут добавлены через JS -->
+        </div>
+    </main>
+
+    <!-- 📥 Футер -->
+    <div id="footer-container"></div>
+
+    <!-- 📦 Скрипты -->
+    <script>
+        // Загружаем sidebar и footer
+        fetch("sidebar.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("sidebar-container").innerHTML = html;
+            });
+
+        fetch("footer.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("footer-container").innerHTML = html;
+            });
+
+        // Здесь ты можешь добавить JS для генерации карточек
+        // Пример:
+        // const myLibrary = [...];
+        // const grid = document.getElementById("libraryGrid");
+        // myLibrary.forEach(book => { ... });
+    </script>
+</body>
+
+</html>

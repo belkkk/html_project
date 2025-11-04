@@ -1,0 +1,63 @@
+/* ______________
+   FOOTER STYLES
+_______________ */
+
+.site-footer {
+    margin-left: 240px;
+    /* ширина sidebar */
+    width: calc(100% - 240px);
+    background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+    color: #e0e0e0;
+    padding: 40px 20px;
+    border-top: 1px solid #333;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    box-sizing: border-box;
+}
+
+
+.footer-content {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-brand h3 {
+    font-size: 22px;
+    color: #ff7043;
+    margin-bottom: 10px;
+}
+
+.footer-brand p {
+    font-size: 14px;
+    color: #b0b0b0;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-links a {
+    color: #7e57c2;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ff7043;
+}
+
+.footer-contact p {
+    font-size: 14px;
+    color: #b0b0b0;
+}
+
+.footer-contact a {
+    color: #ff7043;
+    text-decoration: none;
+}

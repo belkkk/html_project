@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Страница книги</title>
+    <link rel="stylesheet" href="./css/book-page.css" />
+    <link rel="stylesheet" href="./css/sidebar.css" />
+</head>
+
+<body>
+    <main class="main">
+        <div id="sidebar-container"></div>
+
+        <!-- 📘 Контейнер, куда JS вставит содержимое книги -->
+        <div id="book-page"></div>
+    </main>
+
+    <!-- 📥 Подгружаем боковую панель -->
+    <script>
+        fetch("sidebar.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("sidebar-container").innerHTML = html;
+            });
+    </script>
+
+    <!-- 📦 Подключаем JS с логикой отображения книги -->
+    <script src="./script.js"></script>
+</body>
+
+</html>

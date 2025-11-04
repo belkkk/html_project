@@ -1,0 +1,86 @@
+/* ______________
+   LIBRARY STYLES
+_______________ */
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #e0e0e0;
+    overflow-x: hidden;
+}
+
+.library {
+    margin-left: 240px;
+    padding: 40px;
+    width: calc(100% - 240px);
+    box-sizing: border-box;
+    margin-bottom: 1000px;
+}
+
+.library-title {
+    font-size: 26px;
+    color: #ff7043;
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.library-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 30px;
+    justify-content: center;
+}
+
+.library-card {
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.library-card:hover {
+    transform: translateY(-6px);
+}
+
+.library-cover {
+    width: 140px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+}
+
+.library-info {
+    text-align: center;
+}
+
+.library-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+.library-button {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #7e57c2;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.library-button:hover {
+    background-color: #5e3ea1;
+}
