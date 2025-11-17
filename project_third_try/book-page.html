@@ -23,6 +23,31 @@
             });
     </script>
     <script src="script.js"></script>
+
+
+    <!-- Онлайн-читалка -->
+    <div id="onlineReader" class="online-reader">
+        <div class="reader-header">
+            <button id="closeReader" class="reader-close">✕</button>
+            <h2 id="readerTitle">Читалка</h2>
+            <div class="reader-controls">
+                <button id="prevPage" class="reader-btn">← Назад</button>
+                <span id="pageInfo">Страница 1 из 1</span>
+                <button id="nextPage" class="reader-btn">Вперед →</button>
+                <select id="fontSize" class="reader-select">
+                    <option value="16">Маленький</option>
+                    <option value="18" selected>Средний</option>
+                    <option value="20">Большой</option>
+                    <option value="22">Очень большой</option>
+                </select>
+                <button id="darkMode" class="reader-btn">🌙</button>
+            </div>
+        </div>
+        <div class="reader-content">
+            <div id="readerText" class="reader-text"></div>
+        </div>
+    </div>
+
 </body>
 
 </html>
